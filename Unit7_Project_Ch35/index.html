@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Debug Bureau</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrap headrow"><a class="logo" href="index.html"><span class="mark">35</span>Debug Bureau</a><span
+                class="toplabel">JavaScript detective lab</span></div>
+    </header>
+    <main class="wrap">
+        <div class="hero">
+            <p class="eyebrow">Case files · Developer tools</p>
+            <h1>Welcome to the Debug Bureau.</h1>
+            <p class="lede">Five small incidents need investigation. Use your browser's Console, Elements panel, and
+                Sources panel, then record what happened, what caused it, and how you fixed it.</p>
+        </div>
+        <div class="panels">
+            <section class="panel">
+                <h2>Incident desk</h2>
+                <div class="controls" id="case-buttons"></div>
+                <div class="tile">
+                    <p class="eyebrow" id="case-type"></p>
+                    <h2 id="case-name"></h2>
+                    <p id="case-description"></p>
+                    <p id="case-hint" class="muted"></p>
+                    <pre id="case-code" class="code"></pre>
+                    <div class="controls"><button id="run-test" class="primary" type="button">Run broken
+                            example</button><button id="reveal" type="button">Reveal possible fix</button></div>
+                    <p class="notice" id="test-result"></p>
+                    <pre id="case-fix" class="code" hidden></pre>
+                </div>
+            </section>
+            <aside class="panel">
+                <h2>Investigation report</h2>
+                <form id="report-form" class="formgrid"><label class="wide">What happened?<textarea id="report-happened"
+                            required></textarea></label><label class="wide">What did the console report?<textarea
+                            id="report-console" required></textarea></label><label class="wide">What caused the
+                        problem?<textarea id="report-cause" required></textarea></label><label class="wide">How did you
+                        fix it?<textarea id="report-fix" required></textarea></label><button type="submit"
+                        class="primary">Save case report</button></form>
+                <p class="notice" id="report-message"></p>
+                <p class="muted">Saved reports stay in this browser.</p>
+            </aside>
+        </div>
+        <section class="panel">
+            <div class="item-row">
+                <h2>Case reports</h2><button id="clear-reports" type="button">Clear reports</button>
+            </div>
+            <div id="report-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot">Debug Bureau<span>Interactive website · JavaScript</span></div>
+    </footer>
+</body>
+
+</html>
